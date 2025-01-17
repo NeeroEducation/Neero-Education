@@ -124,28 +124,48 @@
                 name: 'ChatGPT',
                 description: 'Мощный языковой ассистент, который помогает в написании текстов, программировании и ответах на вопросы. Идеален для учебы и исследований.',
                 image: 'https://avatars.mds.yandex.net/i?id=1f8f7a7f50832082ef8ef70eb81507a0_l-8338869-images-thumbs&n=33&w=960&h=640',
-                icon: 'message-square'
+                icon: 'message-square',
+                url: 'https://chat.openai.com'
             },
             {
                 id: 2,
                 name: 'DALL-E',
                 description: 'Нейросеть для создания изображений по текстовому описанию. Помогает визуализировать идеи и создавать уникальные иллюстрации для проектов.',
                 image: 'https://ezway.s3.amazonaws.com/jondo/ai/ai-generator-dalle2.jpg',
-                icon: 'image'
+                icon: 'image',
+                url: 'https://labs.openai.com'
             },
             {
                 id: 3,
                 name: 'Midjourney',
                 description: 'Продвинутый AI-инструмент для создания художественных изображений. Отлично подходит для творческих проектов и дизайна.',
-                image: 'https://digiseller.mycdn.ink/preview/1088479/p1_4081743_40222d10.jpg',
-                icon: 'pencil'
+                image: 'https://avatars.mds.yandex.net/i?id=88725f967ff35469dc855f024681c0a4_l-8810682-images-thumbs&n=13',
+                icon: 'pencil',
+                url: 'https://www.midjourney.com'
             },
             {
                 id: 4,
                 name: 'Math-gpt',
-                description: 'Мощная нейросеть для решения задач по точным наукам Физике Алгебре и т.д.Отлично подходит для обучения хорошо расписывает решения.',
-                image: 'https://math-gpt.org/_next/image?url=%2Ficon.png&w=640&q=75',
-                icon: 'pencil'
+                description: 'Мощная нейросеть для решения задач по точным наукам Физике Алгебре и т.д. Отлично подходит для обучения хорошо расписывает решения.',
+                image: 'https://static.vecteezy.com/system/resources/previews/000/155/609/original/free-vector-illustration-about-mathematics.jpg',
+                icon: 'calculator',
+                url: 'https://math-gpt.com'
+            },
+            {
+                id: 5,
+                name: 'Claude',
+                description: 'Продвинутый AI-ассистент от Anthropic, способный к глубокому анализу текста, программированию и решению сложных задач.',
+                image: 'https://avatars.mds.yandex.net/i?id=23870bb66c987106095dbbb3344ca0f3_l-8254804-images-thumbs&n=13',
+                icon: 'brain',
+                url: 'https://claude.ai'
+            },
+            {
+                id: 6,
+                name: 'Stable Diffusion',
+                description: 'Мощный инструмент для генерации и редактирования изображений с открытым исходным кодом.',
+                image: 'https://d7umqicpi7263.cloudfront.net/img/product/804908c9-7b09-4f6d-856e-a8a2bbcac105.com/45babd703089a46abb1ca78d01e222b6',
+                icon: 'palette',
+                url: 'https://stablediffusionweb.com'
             }
         ];
 
@@ -186,9 +206,9 @@
                     <div class="p-8">
                         <div class="flex items-center gap-3 mb-4">
                             <i data-lucide="${tool.icon}" class="w-6 h-6"></i>
-                            <h2 class="text-2xl font-bold text-gray-900">
+                            <a href="${tool.url}" target="_blank" class="text-2xl font-bold text-gray-900 hover:text-indigo-600 transition-colors no-underline">
                                 ${tool.name}
-                            </h2>
+                            </a>
                         </div>
                         <p class="text-gray-600 leading-relaxed">
                             ${tool.description}
